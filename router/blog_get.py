@@ -19,11 +19,11 @@ router = APIRouter(
     description='This api call simulated fetching all blogs.',
     response_description='The list of available blogs'
     )
-def get_blogs(page = 1, page_size: Optional[int] = None, req_parameter: dict = Depends(required_functionality)):
-    return {'message': f'All {page_size} blogs on page {page}', 'req': req_parameter}
+def get_blogs(page = 1, page_size: Optional[int] = None,):
+    return {'message': f'All {page_size} blogs on page {page}'}
 
 @router.get('/{id}/comments/{comment_id}', tags=['comment'])
-def get_comment(id: int, comment_id: int, valid: bool = True, username: Optional[str] = None, req_parameter: dict = Depends(required_functionality)):
+def get_comment(id: int, comment_id: int, valid: bool = True, username: Optional[str] = None):
     """
     Simulated retrieving a comment of a blog
 
