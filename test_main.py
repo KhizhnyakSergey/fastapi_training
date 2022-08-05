@@ -1,5 +1,3 @@
-from email import message
-from os import access
 from fastapi.testclient import TestClient
 from main import app
 
